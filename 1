@@ -1,0 +1,17 @@
+.
+
+def rotate_array(arr, rot_count):
+    n = len(arr)
+    rot_count = rot_count % n
+    rotated_arr = []
+    for i in range(n-rot_count, n):
+        rotated_arr.append(arr[i])
+    for i in range(n-rot_count):
+        rotated_arr.append(arr[i])
+    return rotated_arr
+
+# example usage
+arr = [1, 2, 3, 4, 5]
+rot_count = 2
+rotated_arr = rotate_array(arr, rot_count)
+print(rotated_arr) # output: [4, 5, 1, 2, 3]
